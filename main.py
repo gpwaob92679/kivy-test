@@ -26,8 +26,8 @@ class DownloadScreen(MDScreen):
 
     # download_enabled = BooleanProperty(False)
 
-    def __init__(self, **kwargs):
-        super(DownloadScreen, self).__init__(**kwargs)
+    # def __init__(self, **kwargs):
+        # super(DownloadScreen, self).__init__(**kwargs)
         # self.browser_layout = self.ids.browser_layout
         # self.add_widget(self.browser_layout)
 
