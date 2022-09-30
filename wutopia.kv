@@ -14,12 +14,26 @@ MDBoxLayout:
         MDNavigationRailItem:
             text: "Edit"
             icon: "tune"
+            on_release:
+                app.manager.current = 'edit'
 
     ScreenManager:
         id: screen_manager
 
+<HomeScreen>:
+    MDFloatingActionButton:
+        icon: "download"
+        md_bg_color: app.theme_cls.primary_color
+        disabled: True
+        pos: root.width - dp(80), 20
+
 <DownloadScreen>:
-#    Button:
- #       text: "Get Url"
-  #      on_release:
-   #         root.get_url()
+    BrowserLayout:
+        id: browser_layout
+    MDFloatingActionButton:
+        id: download_btn
+        icon: "download"
+        md_bg_color: app.theme_cls.primary_color
+        disabled: not root.download_enabled
+        pos: root.width - dp(80), 20
+
